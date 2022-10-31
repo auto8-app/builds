@@ -37,10 +37,10 @@
    <body class="bg-white dots">
       <div class="grid place-content-center h-screen w-screen">
          <div class="m-auto text-center">
-            <img src="./icon.png" width="62" class="m-auto"/>
+            <img src="./icon.png" width="62" class="m-auto" />
             <a
                href="#"
-               class="block w-64  mt-8 mb-2 m-auto text-xs text-gray-700 font-medium"
+               class="block w-64 mt-8 mb-2 m-auto text-xs text-gray-700 font-medium"
                >Release Notes
                <span
                   class="ml-1 font-medium text-xs leading-5 rounded-full text-sky-400 bg-sky-400/10 px-2 py-0.5"
@@ -51,19 +51,25 @@
                Automate your suite.
             </h1>
             <p class="text-xl w-[512px] m-auto text-gray-700">
-               Write suite of tests that can be tested by everyone in your team (Developers, QA, and
-               UAT).
+               Write suite of tests that can be tested by everyone in your team
+               (Developers, QA, and UAT).
             </p>
-            <button
-               type="button"
-               class="mt-12 h-12 w-64 text-md font-medium rounded-md shadow text-gray-100 bg-gray-700">
-               Download for MacOS <span class="text-xs">Universal</span>
-            </button>
-            <button
-               type="button"
-               class="ml-4 mt-12 h-12 w-48 border border-gray-700 text-md font-medium rounded-md shadow text-gray-700">
-               Download for Windows
-            </button>
+            <div>
+               <form class="inline" method="get" action="./dist/auto8.dmg">
+                  <button
+                     type="submit"
+                     class="mt-12 h-12 w-64 text-md font-medium rounded-md shadow text-gray-100 bg-gray-700">
+                     Download for MacOS <span class="text-xs">Universal</span>
+                  </button>
+               </form>
+               <form class="inline" method="get" action="./dist/auto8.exe">
+                  <button
+                     type="submit"
+                     class="ml-4 mt-12 h-12 w-48 border border-gray-700 text-md font-medium rounded-md shadow text-gray-700">
+                     Download for Windows
+                  </button>
+               </form>
+            </div>
             <p class="mt-8 w-64 m-auto text-xs text-gray-700 font-medium">
                An app to enhance web development and testing experience.
             </p>
