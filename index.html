@@ -1,121 +1,205 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="color-scheme" content="light dark only" />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: light)"
-      content="#f9fafb"
-    />
-    <meta
-      name="theme-color"
-      media="(prefers-color-scheme: dark)"
-      content="#171717"
-    />
-    <meta
-      name="viewport"
-      content="
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="color-scheme" content="light dark only" />
+      <meta
+         name="theme-color"
+         media="(prefers-color-scheme: light)"
+         content="#f9fafb" />
+      <meta
+         name="theme-color"
+         media="(prefers-color-scheme: dark)"
+         content="#171717" />
+      <meta
+         name="viewport"
+         content="
             width=device-width,
             initial-scale=1.0,
             maximum-scale=1.0,
             user-scalable=no,
             minimal-ui
-         "
-    />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="
+         " />
+      <meta
+         http-equiv="Content-Security-Policy"
+         content="
             default-src 'self';
             style-src   'self' 'unsafe-inline';
             img-src     'self' data: https:;
             font-src    'self' https://fonts.gstatic.com;
             connect-src 'self';
             script-src  'self' https://*.tailwindcss.com/;
-        "
-    />
-    <link rel="icon" type="image/png" href="./icon.png" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-      .dots {
-        background: radial-gradient(circle, #efefef 10%, transparent 11%),
-          radial-gradient(circle at bottom left, #efefef 5%, transparent 6%),
-          radial-gradient(circle at bottom right, #efefef 5%, transparent 6%),
-          radial-gradient(circle at top left, #efefef 5%, transparent 6%),
-          radial-gradient(circle at top right, #efefef 5%, transparent 6%);
-        background-size: 0.7em 0.7em;
-        background-color: #ffffff;
-        opacity: 1;
-      }
-      @media (prefers-color-scheme: dark) {
-        .dots {
-          background: radial-gradient(circle, rgb(38,38,38) 10%, transparent 11%),
-            radial-gradient(circle at bottom left, rgb(38,38,38) 5%, transparent 6%),
-            radial-gradient(circle at bottom right, rgb(38,38,38) 5%, transparent 6%),
-            radial-gradient(circle at top left, rgb(38,38,38) 5%, transparent 6%),
-            radial-gradient(circle at top right, rgb(38,38,38) 5%, transparent 6%);
-          background-size: 0.7em 0.7em;
-          background-color: #ffffff;
-          opacity: 0.95;
-        }
-      }
-    </style>
-  </head>
-  <body class="bg-white dots dark:bg-neutral-900">
-    <div class="grid place-content-center h-screen w-screen">
-      <div class="m-auto text-center">
-        <img src="./icon.png" width="62" class="m-auto" />
-        <a
-          href="#"
-          class="block w-64 mt-8 mb-2 m-auto text-xs text-gray-700 font-medium dark:text-neutral-300"
-          >Release Notes
-          <span
-            class="ml-1 font-medium text-xs leading-5 rounded-full text-sky-400 bg-sky-400/10 px-2 py-0.5"
-            >In Progress</span
-          ></a
-        >
-        <h1 class="text-6xl font-bold text-gray-700 mb-4 dark:text-neutral-300">
-          Automate your suite.
-        </h1>
-        <p class="text-xl w-[512px] m-auto text-gray-700 dark:text-neutral-300">
-          Write suite of tests that can be tested by everyone in your team
-          (Developers, QA, and UAT).
-        </p>
-        <div>
-          <form
-            class="inline"
-            method="get"
-            action="https://github.com/ziaahsan/auto8-website/releases/"
-          >
-            <button
-              type="submit"
-              class="mt-12 h-12 w-64 text-md font-medium rounded-md shadow text-gray-100 bg-gray-700 dark:bg-orange-500/90"
+        " />
+      <link rel="icon" type="image/png" href="./icon.png" />
+      <!-- @ TODO LOW: Update to production ready. -->
+      <script src="https://cdn.tailwindcss.com"></script>
+      <style>
+         .dots {
+            background: radial-gradient(circle, #efefef 10%, transparent 11%),
+               radial-gradient(
+                  circle at bottom left,
+                  #efefef 5%,
+                  transparent 6%
+               ),
+               radial-gradient(
+                  circle at bottom right,
+                  #efefef 5%,
+                  transparent 6%
+               ),
+               radial-gradient(circle at top left, #efefef 5%, transparent 6%),
+               radial-gradient(circle at top right, #efefef 5%, transparent 6%);
+            background-size: 0.7em 0.7em;
+            background-color: #ffffff;
+            opacity: 1;
+         }
+         @media (prefers-color-scheme: dark) {
+            .dots {
+               background: radial-gradient(
+                     circle,
+                     rgb(38, 38, 38) 10%,
+                     transparent 11%
+                  ),
+                  radial-gradient(
+                     circle at bottom left,
+                     rgb(38, 38, 38) 5%,
+                     transparent 6%
+                  ),
+                  radial-gradient(
+                     circle at bottom right,
+                     rgb(38, 38, 38) 5%,
+                     transparent 6%
+                  ),
+                  radial-gradient(
+                     circle at top left,
+                     rgb(38, 38, 38) 5%,
+                     transparent 6%
+                  ),
+                  radial-gradient(
+                     circle at top right,
+                     rgb(38, 38, 38) 5%,
+                     transparent 6%
+                  );
+               background-size: 0.7em 0.7em;
+               background-color: #ffffff;
+               opacity: 0.95;
+            }
+         }
+      </style>
+   </head>
+   <body class="bg-white dots dark:bg-neutral-900">
+      <div>
+         <div class="container m-auto text-center">
+            <img src="./icon.png" width="62" class="m-auto mt-8" />
+            <div class="mt-28">
+               <h1
+                  class="text-6xl font-semibold text-gray-700 mb-4 dark:text-neutral-300">
+                  Automate your suite.
+               </h1>
+               <p
+                  class="text-xl w-[512px] m-auto text-gray-700 dark:text-neutral-300">
+                  Write suite of tests that can be tested by everyone in your
+                  team (Developers, QA, VQA, and UAT).
+               </p>
+            </div>
+            <div class="felx my-6">
+               <span
+                  class="ml-1 font-medium text-xs leading-5 rounded-full text-sky-400 bg-sky-400/10 px-2 py-0.5"
+                  >Release Notes - In Progress</span
+               >
+               <span
+                  class="ml-1 font-medium text-xs leading-5 rounded-full text-emerald-400 bg-emerald-400/10 px-2 py-0.5"
+                  >Closed Alpha</span
+               >
+            </div>
+            <div>
+               <form
+                  class="inline"
+                  method="get"
+                  action="https://github.com/ziaahsan/auto8-website/releases/">
+                  <button
+                     type="submit"
+                     class="mt-6 h-12 w-64 text-md font-medium rounded-md shadow text-gray-100 bg-gray-700 dark:bg-orange-500/90 dark:hover:bg-orange-500">
+                     Download for MacOS <span class="text-xs">Universal</span>
+                  </button>
+               </form>
+               <form
+                  class="inline"
+                  method="get"
+                  action="https://github.com/ziaahsan/auto8-website/releases/">
+                  <button
+                     type="submit"
+                     class="ml-4 mt-6 h-12 w-48 border border-gray-700 text-md font-medium rounded-md shadow text-gray-700 dark:text-sky-500/90 dark:border-sky-500/90 dark:hover:border-sky-400 dark:hover:text-sky-400">
+                     Download for Windows
+                  </button>
+               </form>
+            </div>
+            <p
+               class="mt-8 w-64 m-auto text-xs text-gray-700 font-medium dark:text-neutral-300/80">
+               The app that enhances web development and testing experience for
+               everyone.
+            </p>
+            <span
+               class="inline-block mt-4 font-medium text-xs leading-5 rounded-full text-yellow-400 bg-yellow-400/10 px-2 py-0.5"
+               >Roadmap - In Progress</span
             >
-              Download for MacOS <span class="text-xs">Universal</span>
-            </button>
-          </form>
-          <form
-            class="inline"
-            method="get"
-            action="https://github.com/ziaahsan/auto8-website/releases/"
-          >
-            <button
-              type="submit"
-              class="ml-4 mt-12 h-12 w-48 border border-gray-700 text-md font-medium rounded-md shadow text-gray-700 dark:text-sky-500/90 dark:border-sky-500/90"
-            >
-              Download for Windows
-            </button>
-          </form>
-        </div>
-        <p class="mt-8 w-64 m-auto text-xs text-gray-700 font-medium dark:text-neutral-300/80">
-          An app to enhance web development and testing experience.
-        </p>
-        <div class="relative inline-block mt-4">
-          <p class="inline w-64 m-auto text-xs text-gray-700 font-medium dark:text-neutral-300/80">
-            auto8.app &middot; Version 1.0.0a
-          </p>
-        </div>
+         </div>
+         <hr class="border-2 w-1/2 m-auto my-12 dark:border-neutral-800/40 rounded" />
+         <div
+            class="container max-w-[900px] m-auto mt-14 grid grid grid-cols-3 gap-3">
+            <div class="col-span-2 flex flex-col justify-center items-center">
+               <img
+                  src="./assets/images/plays.png"
+                  class="m-auto rounded drop-shadow-lg" />
+            </div>
+            <div>
+               <h1 class="text-lg font-semibold dark:text-neutral-300">
+                  Plays
+               </h1>
+               <p class="text-sm dark:text-neutral-400">
+                  Add plays to manage as many flows to quickly test and automate
+                  a suite.
+               </p>
+            </div>
+         </div>
+         <div
+            class="container max-w-[900px] m-auto mt-28 grid grid grid-cols-3 gap-3">
+            <div class="col-span-2 text-right flex flex-col justify-center">
+               <h1 class="text-lg font-semibold dark:text-neutral-300">
+                  Flows
+               </h1>
+               <p
+                  class="text-sm dark:text-neutral-400 max-w-[250px] float-right">
+                  Add flows to create a flow tree to manage all of your actions.
+               </p>
+            </div>
+            <div class="">
+               <img
+                  src="./assets/images/flows.png"
+                  class="m-auto rounded drop-shadow-lg" />
+            </div>
+         </div>
+         <div class="container max-w-[900px] m-auto mt-28">
+            <div class="col-span-2 text-center">
+               <div class="max-w-[500px] m-auto">
+                  <h1 class="text-lg font-semibold dark:text-neutral-300">
+                     Writing Tests Shouldn't be Hard
+                  </h1>
+                  <p class="text-sm dark:text-neutral-400">
+                     Focus on what matters instead writing tests over, and over
+                     again. Modify your app's flow from the frontend,
+                     collaborate, and automate.
+                  </p>
+               </div>
+            </div>
+            <div class="">
+               <img
+                  src="./assets/images/app.png"
+                  class="m-auto rounded drop-shadow-lg" />
+            </div>
+         </div>
       </div>
-    </div>
-  </body>
+      <div class="m-4 text-center">
+         <p class="text-xs dark:text-neutral-400">auto8.app &copy; 2023</p>
+      </div>
+   </body>
 </html>
