@@ -1,5 +1,6 @@
 # Auto8
-A simple automation tool for the web. It's pronounced *Auto it*. Which helps create a suite of test cases for developers, and QAs to make sure no suites, features, and functionality rolls out without testing.
+![Alt text](/assets/images/dark/app.png "Auto8 app")
+An automation tool for the frontend. It's pronounced *Auto it*. Which helps create a suite of test cases for developers, and QAs to make sure no suites, features, and functionality rolls out without tests.
 
 Test the same test cases written across all your environments with ease.
 
