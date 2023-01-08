@@ -138,12 +138,46 @@
          <div
             class="container max-w-[900px] m-auto mt-14 grid grid grid-cols-3 gap-3">
             <div class="col-span-2 flex flex-col justify-center items-center">
-               <img
-                  src="./assets/images/dark/plays.png"
-                  class="m-auto hidden rounded drop-shadow-lg dark:block" />
-               <img
-                  src="./assets/images/light/plays.png"
-                  class="m-auto block rounded drop-shadow-lg dark:hidden" />
+               <div
+                  class="rounded-full shadow-lg shadow-slate-200 p-1 top-2 left-2 flex z-[99] bg-white dark:bg-neutral-800 dark:shadow-neutral-900">
+                  <ul>
+                     <li
+                        class="popover-anchor inline-block py-1 px-4 mr-2 rounded-full cursor-pointer bg-orange-500/90 hover:bg-orange-500 text-white">
+                        <h5 class="text-sm">
+                           Auto8.app <span class="opacity-75">/ .app</span>
+                        </h5>
+                     </li>
+                     <li
+                        class="popover-anchor inline-block py-1 px-4 mr-2 rounded-full cursor-pointer bg-gray-100 hover:bg-gray-200/60 text-gray-800 dark:text-neutral-300 dark:bg-neutral-900/95 dark:hover:bg-neutral-900/80">
+                        <h5 class="text-sm">
+                           Auto8.app <span class="opacity-75">/ .website</span>
+                        </h5>
+                     </li>
+                     <li
+                        class="inline-block py-1 px-4 rounded-full bg-gray-100 hover:cursor-pointer dark:bg-neutral-900/50 dark:hover:bg-neutral-900">
+                        <h5 class="text-sm text-gray-800 dark:text-neutral-300">
+                           <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="inline-block"
+                              width="18"
+                              height="18"
+                              viewBox="0 0 24 24"
+                              stroke-width="2"
+                              stroke="currentColor"
+                              fill="none"
+                              stroke-linecap="round"
+                              stroke-linejoin="round">
+                              <path
+                                 stroke="none"
+                                 d="M0 0h24v24H0z"
+                                 fill="none"></path>
+                              <line x1="12" y1="5" x2="12" y2="19"></line>
+                              <line x1="5" y1="12" x2="19" y2="12"></line>
+                           </svg>
+                        </h5>
+                     </li>
+                  </ul>
+               </div>
             </div>
             <div>
                <h1
@@ -152,31 +186,179 @@
                </h1>
                <p class="text-sm text-neutral-500 dark:text-neutral-400">
                   Add plays to manage as many flows to quickly test and automate
-                  a suite.
+                  a suite of tests.
                </p>
             </div>
          </div>
          <div
-            class="container max-w-[900px] m-auto mt-28 grid grid grid-cols-3 gap-3">
+            class="relative container max-w-[900px] min-h-[200px] m-auto mt-28 grid grid grid-cols-3 gap-3">
             <div class="text-right flex flex-col justify-center">
                <h1
                   class="text-lg font-semibold text-neutral-600 dark:text-neutral-300">
-                  Flows
+                  Flow menu
                </h1>
                <p class="text-sm text-neutral-500 dark:text-neutral-400">
-                  Add flows to create a flow tree to manage all of your actions.
+                  Creates, edit, save and test your flow right from the navigation menu.
                </p>
             </div>
-            <div class="col-span-2">
-               <img
-                  src="./assets/images/dark/flows.png"
-                  class="m-auto hidden rounded drop-shadow-lg dark:block" />
-               <img
-                  src="./assets/images/light/flows.png"
-                  class="m-auto block rounded drop-shadow-lg dark:hidden" />
+            <div class="relative col-span-2">
+               <div class="absolute right-[50%] top-0">
+                  <div
+                     class="bg-white shadow-lg shadow-slate-200 border border-slate-100 rounded mt-4 dark:bg-neutral-800 dark:border-neutral-900 dark:shadow-neutral-900 dark:text-neutral-400">
+                     <div
+                        class="p-1 cursor-pointer rounded border-gray-100 hover:bg-slate-200 dark:border-neutral-900/80 dark:hover:bg-neutral-700">
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           class="icon icon-tabler icon-tabler-browser-check"
+                           width="22"
+                           height="22"
+                           viewBox="0 0 24 24"
+                           stroke-width="2"
+                           stroke="currentColor"
+                           fill="none"
+                           stroke-linecap="round"
+                           stroke-linejoin="round">
+                           <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"></path>
+                           <rect
+                              x="4"
+                              y="4"
+                              width="16"
+                              height="16"
+                              rx="1"></rect>
+                           <path d="M4 8h16"></path>
+                           <path d="M8 4v4"></path>
+                           <path d="M9.5 14.5l1.5 1.5l3 -3"></path>
+                        </svg>
+                     </div>
+                  </div>
+                  <div
+                     class="bg-white shadow-lg shadow-slate-200 border border-slate-100 rounded mt-4 dark:bg-neutral-800 dark:border-neutral-900 dark:shadow-neutral-900 dark:text-neutral-400">
+                     <div
+                        class="p-1 cursor-pointer rounded-t border-b-2 border-gray-100 hover:bg-slate-200 dark:border-neutral-900/80 dark:hover:bg-neutral-700">
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           class="icon icon-tabler icon-tabler-player-play"
+                           width="22"
+                           height="22"
+                           viewBox="0 0 24 24"
+                           stroke-width="2"
+                           stroke="currentColor"
+                           fill="none"
+                           stroke-linecap="round"
+                           stroke-linejoin="round">
+                           <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"></path>
+                           <path d="M7 4v16l13 -8z"></path>
+                        </svg>
+                     </div>
+                     <div
+                        class="p-1 cursor-pointer rounded-b border-gray-100 hover:bg-slate-200 dark:hover:bg-neutral-700">
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           class="icon icon-tabler icon-tabler-device-floppy"
+                           width="22"
+                           height="22"
+                           viewBox="0 0 24 24"
+                           stroke-width="2"
+                           stroke="currentColor"
+                           fill="none"
+                           stroke-linecap="round"
+                           stroke-linejoin="round">
+                           <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"></path>
+                           <path
+                              d="M6 4h10l4 4v10a2 2 0 0 1 -2 2h-12a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2"></path>
+                           <circle cx="12" cy="14" r="2"></circle>
+                           <polyline points="14 4 14 8 8 8 8 4"></polyline>
+                        </svg>
+                     </div>
+                  </div>
+                  <div
+                     class="bg-white shadow-lg shadow-slate-200 border border-slate-100 rounded mt-4 dark:bg-neutral-800 dark:border-neutral-900 dark:shadow-neutral-900 dark:text-neutral-400">
+                     <div
+                        class="p-1 rounded-t border-b-2 border-gray-100 bg-gray-100/60 dark:bg-neutral-900/60 dark:border-neutral-900/80">
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           class="icon icon-tabler icon-tabler-toggle-left"
+                           width="22"
+                           height="22"
+                           viewBox="0 0 24 24"
+                           stroke-width="2"
+                           stroke="currentColor"
+                           fill="none"
+                           stroke-linecap="round"
+                           stroke-linejoin="round">
+                           <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"></path>
+                           <circle cx="8" cy="12" r="2"></circle>
+                           <rect
+                              x="2"
+                              y="6"
+                              width="20"
+                              height="12"
+                              rx="6"></rect>
+                        </svg>
+                     </div>
+                     <div
+                        class="p-1 rounded-t border-b-2 border-gray-100 dark:border-neutral-900/80">
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           class="icon icon-tabler icon-tabler-cloud-download"
+                           width="22"
+                           height="22"
+                           viewBox="0 0 24 24"
+                           stroke-width="2"
+                           stroke="currentColor"
+                           fill="none"
+                           stroke-linecap="round"
+                           stroke-linejoin="round">
+                           <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"></path>
+                           <path
+                              d="M19 18a3.5 3.5 0 0 0 0 -7h-1a5 4.5 0 0 0 -11 -2a4.6 4.4 0 0 0 -2.1 8.4"></path>
+                           <line x1="12" y1="13" x2="12" y2="22"></line>
+                           <polyline points="9 19 12 22 15 19"></polyline>
+                        </svg>
+                     </div>
+                     <div
+                        class="p-1 rounded-b border-gray-100 bg-gray-100/60 dark:bg-neutral-900/60 dark:border-neutral-900/80">
+                        <svg
+                           xmlns="http://www.w3.org/2000/svg"
+                           class="icon icon-tabler icon-tabler-message"
+                           width="22"
+                           height="22"
+                           viewBox="0 0 24 24"
+                           stroke-width="2"
+                           stroke="currentColor"
+                           fill="none"
+                           stroke-linecap="round"
+                           stroke-linejoin="round">
+                           <path
+                              stroke="none"
+                              d="M0 0h24v24H0z"
+                              fill="none"></path>
+                           <path
+                              d="M4 21v-13a3 3 0 0 1 3 -3h10a3 3 0 0 1 3 3v6a3 3 0 0 1 -3 3h-9l-4 4"></path>
+                           <line x1="8" y1="9" x2="16" y2="9"></line>
+                           <line x1="8" y1="13" x2="14" y2="13"></line>
+                        </svg>
+                     </div>
+                  </div>
+               </div>
             </div>
          </div>
-         <div class="container max-w-[900px] m-auto mt-28">
+         <div class="relative container max-w-[900px] m-auto mt-28">
             <div class="col-span-2 text-center">
                <div class="max-w-[500px] m-auto">
                   <h1
@@ -184,8 +366,7 @@
                      Writing Tests Shouldn't be Hard
                   </h1>
                   <p class="text-sm text-neutral-500 dark:text-neutral-400">
-                     Focus on what matters instead writing tests over, and over
-                     again. Modify your app's flow from the frontend,
+                     Focus on what matters! Modify your app's flow from the frontend,
                      collaborate, and automate.
                   </p>
                </div>
