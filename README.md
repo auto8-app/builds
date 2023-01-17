@@ -1,14 +1,26 @@
-# Auto8
-![Alt text](/assets/images/dark/app.png "Auto8 app")
-An automation tool for the frontend. It's pronounced *Auto it*. Which helps create a suite of test cases for developers, and QAs to make sure no suites, features, and functionality rolls out without tests.
+<p align="center">
+<img src="icon.png" width="192" />
+</p>
 
-Test the same test cases written across all your environments with ease.
+### About Auto8
+Auto8 is an automation tool for anyone creating automated tasks. Wether they be developers and QA working together to perform regression testing, writing simple feature test cases or even creating simple automated tasks: Tweets, Posts, URL Health Check, etc... 
 
 ---
-#### Installation
+
+### Setting up Auto8
+Auto8 is a simple tool created with ElectronJS using React, and Reactflow. The goal is to simply install all the required dependencies to get the app  running.
+
 This repository is a simple stand alone web app to easily help distribute the release of the auto8 app. Please visit the [releases](https://github.com/auto8-app/website/releases) page to see the most up-to date release and notes.
 
+##### Users:
+
+- Download the app from https://auto8.app
+- Login with your credentials
+
+![Alt text](/assets/images/dark/app.png "Auto8 app")
+
 ---
+
 #### Credits / Software Used in this project
 - ElectronJS
 - ReactJS
@@ -17,5 +29,6 @@ This repository is a simple stand alone web app to easily help distribute the re
 - And many other packages that can be found in `package.json` file.
 
 ---
+
 #### Roadmap
 - Coming soon
