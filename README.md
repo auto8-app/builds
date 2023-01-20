@@ -30,5 +30,10 @@ This repository is a simple stand alone web app to easily help distribute the re
 
 ---
 
+#### Feature, Bugfix, and Security
+We would love to hear from you! If you have a feature request, bugfix, or vulnerability to report. Please drop us a message at [help@auto8.app](mailto:help@auto8.app). 
+
+---
+
 #### Roadmap
 - Coming soon
