@@ -1,7 +1,0 @@
-dist_electron
-node_modules
-
-dist
-build
-
-public/assets/fonts
