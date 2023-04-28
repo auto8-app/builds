@@ -17,7 +17,7 @@ This repository is a simple stand alone web app to easily help distribute the re
 - Download the app from https://auto8.app
 - Login with your credentials
 
-![Alt text](/assets/images/dark/app.png "Auto8 app")
+![Alt text](./app.png "Auto8 app")
 
 ---
 
